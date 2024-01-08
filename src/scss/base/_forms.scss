@@ -1,0 +1,29 @@
+@use '../components/buttons' as button;
+
+
+%inputs {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-secondary-100);
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary-100);
+    font-family: var(--font-sans);
+    margin-bottom: var(--gap-large);
+    font-size: var(--font-size-1);
+    width: 100%;
+}
+
+
+input:not([type='submit'], [type='checkbox'], [type='radio']) {
+    @extend %inputs;
+    max-width: 100%;
+    width: 100%;
+
+}
+
+textarea {
+    @extend %inputs;
+}
+
+input[type='submit']{
+    @include button.default;
+}

@@ -1,23 +1,52 @@
+
+
+
+
 h1, h2, h3, h4, h5, h6 {
 
+    font-family: var(--font-sans);
 
 }
 
-h1 {}
+h1 {
 
-h2 {}
+    font-size: var(--font-size-6);
+}
 
-h3 {}
+h2 {
+    font-size: var(--font-size-5);
+}
 
-h4 {}
+h3 {
 
-h5 {}
+    font-size: var(--font-size-4);
+}
 
-h6 {}
+h4 {
+    font-size: var(--font-size-3);
+}
 
-a {}
+h5 {
+    font-size: var(--font-size-2);
+}
 
-p {}
+h6 {
+    font-size: var(--font-size-1);
+}
 
-li {}
+a {
+    line-height: var(--line-height);
+}
+
+p {
+    line-height: var(--line-height);
+}
+
+li {
+    line-height: var(--line-height);
+}
+
+blockquote {   
+    line-height: var(--line-height);
+}
 

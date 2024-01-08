@@ -1,0 +1,31 @@
+@mixin default(
+    $background: var(--color-accent-400),
+    $color: var(--color-primary-400),
+    $border-radius: var(--border-radius)
+) {
+background-color: $background;
+color: $color;
+padding: 1rem 2rem;
+text-decoration: none;
+display: inline-block;
+border: 2px solid transparent;
+border-radius: $border-radius;
+
+}
+
+
+@mixin outline(
+    $background: transparent,
+    $color: var(--color-accent-400),
+    $border-radius: var(--border-radius),
+    $border-color: var(--color-accent-400)
+) {
+background-color: $background;
+color: $color;
+padding: 1rem 2rem;
+text-decoration: none;
+display: inline-block;
+border: 2px solid $border-color;
+border-radius: $border-radius;
+
+}

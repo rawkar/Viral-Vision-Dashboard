@@ -1,0 +1,24 @@
+
+// Responsive when screen is max
+//Usage:
+//@include responsive.max(600px) { ... }
+
+
+
+@mixin max($width: 480px) {
+
+    @media screen and (max-width: $width) {
+        @content; 
+    }
+
+}
+
+
+
+@mixin min($width: 1440px) {
+
+    @media screen and (min-width: $width) {
+        @content; 
+    }
+
+}

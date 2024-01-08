@@ -1,5 +1,55 @@
 :root {
   --font-sans: "Arial", sans-serif;
+  --font-serif: "Georgia", serif;
+  --font-size: 16px;
+  --font-scale: 1.25;
+  --font-size-1: var(--font-size);
+  --font-size-2: calc(var(--font-size-1) * var(--font-scale));
+  --font-size-3: calc(var(--font-size-2) * var(--font-scale));
+  --font-size-4: calc(var(--font-size-3) * var(--font-scale));
+  --font-size-5: calc(var(--font-size-4) * var(--font-scale));
+  --font-size-6: calc(var(--font-size-5) * var(--font-scale));
+  --font-size-small: calc(var(--font-size-1) / var(--font-scale));
+  --line-height: 1.6;
+  --color-primary-100: #fff;
+  --color-primary-200: #fff;
+  --color-primary-300: #fff;
+  --color-primary-400: #fff;
+  --color-primary-500: #fff;
+  --color-primary-600: #fff;
+  --color-primary-700: #fff;
+  --color-primary-800: #fff;
+  --color-secondary-100: hsl(206, 20%, 90%);
+  --color-secondary-200: hsl(206, 20%, 80%);
+  --color-secondary-300: hsl(206, 20%, 70%);
+  --color-secondary-400: hsl(206, 20%, 60%);
+  --color-secondary-500: hsl(206, 20%, 40%);
+  --color-secondary-600: hsl(206, 20%, 30%);
+  --color-secondary-700: hsl(206, 20%, 20%);
+  --color-secondary-800: hsl(206, 20%, 0%);
+  --color-accent-100: #026fc2;
+  --color-accent-200: #026fc2;
+  --color-accent-300: #026fc2;
+  --color-accent-400: #026fc2;
+  --color-accent-500: #026fc2;
+  --color-accent-600: #026fc2;
+  --color-accent-700: #026fc2;
+  --color-accent-800: #026fc2;
+  --border-radius: 5px;
+  --padding-content: 2rem;
+  --section-gap: 5rem;
+  --section-gap-inner: 3.5rem;
+  --gap-content: 2rem;
+  --gap-large: 1rem;
+  --gap-small: 0.75rem;
+  --inner-width: 71.25rem;
+  --grid-container: [full-start] minmax(32px, 1fr) [inner-start]
+    minmax(0, var(--inner-width)) [inner-end] minmax(32px, 1fr) [full-end];
+}
+
+html, body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size);
 }
 
 * {
@@ -19,6 +69,76 @@ img {
   max-width: 100%;
   width: auto;
   height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+}
+
+h1 {
+  font-size: var(--font-size-6);
+}
+
+h2 {
+  font-size: var(--font-size-5);
+}
+
+h3 {
+  font-size: var(--font-size-4);
+}
+
+h4 {
+  font-size: var(--font-size-3);
+}
+
+h5 {
+  font-size: var(--font-size-2);
+}
+
+h6 {
+  font-size: var(--font-size-1);
+}
+
+a {
+  line-height: var(--line-height);
+}
+
+p {
+  line-height: var(--line-height);
+}
+
+li {
+  line-height: var(--line-height);
+}
+
+blockquote {
+  line-height: var(--line-height);
+}
+
+textarea, input:not([type=submit], [type=checkbox], [type=radio]) {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-secondary-100);
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary-100);
+  font-family: var(--font-sans);
+  margin-bottom: var(--gap-large);
+  font-size: var(--font-size-1);
+  width: 100%;
+}
+
+input:not([type=submit], [type=checkbox], [type=radio]) {
+  max-width: 100%;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: var(--color-accent-400);
+  color: var(--color-primary-400);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
 }
 
 /*# sourceMappingURL=style.css.map */
