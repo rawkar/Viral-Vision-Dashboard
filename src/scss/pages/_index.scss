@@ -29,11 +29,18 @@
     gap: 2rem;
 
     .main__box-card {
-      background-color: #081329;
+      background: rgb(8, 19, 41);
+      background: linear-gradient(
+        175deg,
+        rgba(8, 19, 41, 1) 0%,
+        rgba(28, 66, 143, 1) 100%
+      );
       color: #fcfcfc;
       border-radius: var(--border-radius);
       padding: 1rem 2rem;
       flex: 1;
+
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
       .main__box-content,
       .main__box-title,
@@ -76,16 +83,6 @@
     .geo {
       grid-column: span 4;
     }
-
-    // .main__box-rows-2 {
-    //   display: grid;
-    //   grid-template-columns: 1fr 1fr 1fr;
-    // }
-
-    // .main__box-rows-3 {
-    //   display: grid;
-    //   grid-template-columns: 2fr 1fr;
-    // }
 
     // Enheter
     .enheter__container {

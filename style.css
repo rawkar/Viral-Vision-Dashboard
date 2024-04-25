@@ -211,6 +211,76 @@ input[type=submit] {
   text-decoration: none;
 }
 
+.submain {
+  display: grid;
+  grid-template-columns: minmax(32px, 1fr) minmax(0, 80rem) minmax(32px, 1fr);
+}
+.submain__inner {
+  grid-column: 2/3;
+}
+.submain .submain__title {
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}
+.submain__box-container {
+  gap: 2rem;
+}
+.submain__box-container .submain__box-card {
+  background: rgb(8, 19, 41);
+  background: linear-gradient(175deg, rgb(8, 19, 41) 0%, rgb(28, 66, 143) 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #fcfcfc;
+  border-radius: var(--border-radius);
+  padding: 1rem 2rem;
+  flex: 1;
+}
+.submain__box-container .submain__box-card .submain__box-content,
+.submain__box-container .submain__box-card .submain__box-title,
+.submain__box-container .submain__box-card .submain__box-subheader {
+  color: #fcfcfc;
+}
+.submain__box-container .submain__box-card p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+.submain__box-container .submain__box-card .submain__box-title {
+  margin-bottom: 2rem;
+}
+.submain__box-container .submain__box-rows-1 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+.submain__box-container .basta-inlagg,
+.submain__box-container .klick-inlagg {
+  grid-column: span 6;
+}
+.submain__box-container .antal-foljare,
+.submain__box-container .nya-foljare,
+.submain__box-container .okning-foljare {
+  grid-column: span 4;
+}
+.submain__box-container .enheter {
+  grid-column: span 8;
+}
+.submain__box-container .geo {
+  grid-column: span 4;
+}
+.submain__box-container .enheter__container {
+  display: flex;
+  gap: 8rem;
+}
+.submain__box-container .dator,
+.submain__box-container .mobil {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.submain__box-container .dator {
+  border-right: 1px solid rgba(252, 252, 252, 0.3294117647);
+  padding-right: 6rem;
+}
+
 .container {
   min-height: 100vh;
   margin: 0;
@@ -236,11 +306,13 @@ input[type=submit] {
   gap: 2rem;
 }
 .main__box-container .main__box-card {
-  background-color: #081329;
+  background: rgb(8, 19, 41);
+  background: linear-gradient(175deg, rgb(8, 19, 41) 0%, rgb(28, 66, 143) 100%);
   color: #fcfcfc;
   border-radius: var(--border-radius);
   padding: 1rem 2rem;
   flex: 1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .main__box-container .main__box-card .main__box-content,
 .main__box-container .main__box-card .main__box-title,
