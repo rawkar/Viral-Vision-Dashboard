@@ -1,4 +1,106 @@
-@forward 'home';
-@forward 'page';
-@forward 'single';
-@forward 'contact';
+@forward "home";
+@forward "page";
+@forward "single";
+@forward "contact";
+
+.container {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--color-dark);
+  background: var(--color-light);
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(32px, 1fr) minmax(0, 80rem) minmax(32px, 1fr);
+
+  &__inner {
+    grid-column: 2/3;
+  }
+  .main__title {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+  }
+
+  &__box-container {
+    gap: 2rem;
+
+    .main__box-card {
+      background-color: #081329;
+      color: #fcfcfc;
+      border-radius: var(--border-radius);
+      padding: 1rem 2rem;
+      flex: 1;
+
+      .main__box-content,
+      .main__box-title,
+      .main__box-subheader {
+        color: #fcfcfc;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 13px;
+      }
+
+      .main__box-title {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .main__box-rows-1 {
+      display: grid;
+
+      grid-template-columns: repeat(12, 1fr);
+      gap: 2rem;
+    }
+
+    .sammanfattning,
+    .trender {
+      grid-column: span 6;
+    }
+
+    .instagram,
+    .facebook,
+    .linkedin {
+      grid-column: span 4;
+    }
+
+    .enheter {
+      grid-column: span 8;
+    }
+
+    .geo {
+      grid-column: span 4;
+    }
+
+    // .main__box-rows-2 {
+    //   display: grid;
+    //   grid-template-columns: 1fr 1fr 1fr;
+    // }
+
+    // .main__box-rows-3 {
+    //   display: grid;
+    //   grid-template-columns: 2fr 1fr;
+    // }
+
+    // Enheter
+    .enheter__container {
+      display: flex;
+      gap: 8rem;
+    }
+    .dator,
+    .mobil {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .dator {
+      border-right: 1px solid #fcfcfc54;
+      padding-right: 6rem;
+    }
+  }
+}

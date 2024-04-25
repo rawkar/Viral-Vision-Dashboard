@@ -1,24 +1,20 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-
 body {
-  
-    margin: 0;
-    padding: 0;
-
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 
 figure {
   margin: 0;
 }
 
-
 img {
-
-    max-width: 100%;
-    width: auto;
-    height: auto;
-
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }

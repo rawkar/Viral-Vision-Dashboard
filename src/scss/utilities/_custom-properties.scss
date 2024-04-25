@@ -1,64 +1,42 @@
 :root {
+  --font-sans: "Poppins", sans-serif;
 
-    --font-sans: 'Arial', sans-serif;
-    --font-serif: 'Georgia', serif;
+  --font-size: 16px;
+  --font-scale: 1.25;
 
-    --font-size: 16px;
-    --font-scale: 1.25;
-  
-    --font-size-1: var(--font-size);
-    --font-size-2: calc(var(--font-size-1) * var(--font-scale));
-    --font-size-3: calc(var(--font-size-2) * var(--font-scale));
-    --font-size-4: calc(var(--font-size-3) * var(--font-scale));
-    --font-size-5: calc(var(--font-size-4) * var(--font-scale));
-    --font-size-6: calc(var(--font-size-5) * var(--font-scale));
-    --font-size-small: calc(var(--font-size-1) / var(--font-scale));
+  --font-size-1: var(--font-size);
+  --font-size-2: calc(var(--font-size-1) * var(--font-scale));
+  --font-size-3: calc(var(--font-size-2) * var(--font-scale));
+  --font-size-4: calc(var(--font-size-3) * var(--font-scale));
+  --font-size-5: calc(var(--font-size-4) * var(--font-scale));
+  --font-size-6: calc(var(--font-size-5) * var(--font-scale));
+  --font-size-small: calc(var(--font-size-1) / var(--font-scale));
 
+  --line-height: 1.6;
 
-    --line-height: 1.6;
-  
-    --color-primary-100: #fff;
-    --color-primary-200: #fff;
-    --color-primary-300: #fff;
-    --color-primary-400: #fff;
-    --color-primary-500: #fff;
-    --color-primary-600: #fff;
-    --color-primary-700: #fff;
-    --color-primary-800: #fff;
-   
+  --color-primary: #1cc38b;
 
+  --color-secondary: #07b5f4;
 
-    --color-secondary-100: hsl(206, 20%, 90%);
-    --color-secondary-200: hsl(206, 20%, 80%);
-    --color-secondary-300: hsl(206, 20%, 70%);
-    --color-secondary-400: hsl(206, 20%, 60%);
-    --color-secondary-500: hsl(206, 20%, 40%);
-    --color-secondary-600: hsl(206, 20%, 30%);
-    --color-secondary-700: hsl(206, 20%, 20%);
-    --color-secondary-800: hsl(206, 20%, 0%);
- 
+  --color-complementary: #b71c1c;
 
-    --color-accent-100: #026fc2;
-    --color-accent-200: #026fc2;
-    --color-accent-300: #026fc2;
-    --color-accent-400: #026fc2;
-    --color-accent-500: #026fc2;
-    --color-accent-600: #026fc2;
-    --color-accent-700: #026fc2;
-    --color-accent-800: #026fc2;
-  
-    --border-radius: 5px;
-  
-    --padding-content: 2rem;
-  
-    --section-gap: 5rem;
-    --section-gap-inner: 3.5rem;
-    --gap-content: 2rem;
-    --gap-large: 1rem;
-    --gap-small: 0.75rem;
-  
-    --inner-width: 71.25rem;
-  
-    --grid-container: [full-start] minmax(32px, 1fr) [inner-start]
-      minmax(0, var(--inner-width)) [inner-end] minmax(32px, 1fr) [full-end];
+  --color-dark: #081329;
+  --color-light: #fcfcfc;
+  --color-gray: #364156;
+
+  --border-radius-big: 15px;
+  --border-radius: 10px;
+  --border-radius-small: 5px;
+
+  --padding-content: 2rem;
+
+  --section-gap: 6.5rem;
+  --gap-content: 4rem;
+  --gap-large: 2.5rem;
+  --gap-small: 1.5rem;
+
+  --inner-width: 71.25rem;
+
+  --grid-container: [full-start] minmax(32px, 1fr) [inner-start]
+    minmax(0, var(--inner-width)) [inner-end] minmax(32px, 1fr) [full-end];
 }
