@@ -1,3 +1,5 @@
+@use "../utilities/responsive";
+
 .submain {
   display: grid;
   grid-template-columns: minmax(32px, 1fr) minmax(0, 80rem) minmax(32px, 1fr);
@@ -38,7 +40,11 @@
       }
 
       .submain__box-title {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+
+        @include responsive.max(1100px) {
+          font-size: 0.8rem;
+        }
       }
     }
 
@@ -51,7 +57,7 @@
 
     .basta-inlagg,
     .klick-inlagg {
-      grid-column: span 6;
+      grid-column: span 4;
     }
 
     .antal-foljare,
@@ -65,7 +71,7 @@
     }
 
     .geo {
-      grid-column: span 4;
+      grid-column: span 8;
     }
 
     // Enheter
@@ -84,4 +90,318 @@
       padding-right: 6rem;
     }
   }
+}
+
+//Styling
+
+//LINKEDIN
+
+// Antal följare
+
+#antal-foljare {
+  color: var(--color-primary);
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-left: 8px;
+    position: absolute;
+
+    top: 5px;
+    background-image: url("/assets/icons/trend-up.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.antal-foljare {
+  .submain__box-subheader {
+    margin-top: 2rem;
+    margin-bottom: -0.5rem;
+  }
+}
+
+// Nya följare
+#nya-foljare {
+  color: var(--color-primary);
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-left: 8px;
+    position: absolute;
+
+    top: 5px;
+    background-image: url("/assets/icons/trend-up.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.nya-foljare {
+  .submain__box-subheader {
+    margin-top: 2rem;
+    margin-bottom: -0.5rem;
+  }
+}
+
+// Ökning av följare
+
+#okning-foljare {
+  color: var(--color-complementary);
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-left: 8px;
+    position: absolute;
+
+    top: 5px;
+    background-image: url("/assets/icons/trend-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.okning-foljare {
+  .submain__box-subheader {
+    margin-top: 2rem;
+    margin-bottom: -0.5rem;
+  }
+}
+
+//Bästa inlägg
+
+.basta-inlagg {
+  @include responsive.max(1200px) {
+    h4 {
+      font-size: 1.5rem !important;
+    }
+
+    p {
+    }
+  }
+
+  @include responsive.max(1100px) {
+    h4 {
+      font-size: 1rem !important;
+    }
+
+    p {
+      font-size: 0.6rem !important;
+    }
+  }
+}
+
+// #klick-inlagg-change {
+//   color: var(--color-primary);
+//   position: relative;
+//   &::after {
+//     content: "";
+//     display: inline-block;
+//     width: 26px;
+//     height: 26px;
+//     margin-left: 8px;
+//     position: absolute;
+
+//     top: 6px;
+//     background-image: url("/assets/icons/trend-up.svg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
+
+//   @include responsive.max(1200px) {
+//     h4 {
+//       font-size: 1rem;
+//     }
+//   }
+// }
+
+//Dator
+.dator {
+  position: relative;
+  margin-left: 5.5rem;
+
+  margin-top: 1rem;
+  padding-right: 10rem !important;
+
+  h2 {
+    color: var(--color-complementary) !important;
+  }
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 58px;
+    margin-left: 8px;
+    position: absolute;
+
+    left: -6rem;
+    background-image: url("/assets/icons/desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    margin-left: 6rem;
+    position: absolute;
+
+    background-image: url("/assets/icons/trend-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include responsive.max(1400px) {
+    padding-right: 8rem !important;
+
+    margin-left: 4.5rem;
+
+    &::before {
+      margin-left: 1.5rem;
+    }
+
+    &::after {
+      margin-left: 6rem;
+    }
+  }
+
+  @include responsive.max(1200px) {
+    padding-right: 4rem !important;
+
+    h2 {
+      font-size: 2rem !important;
+    }
+
+    margin-left: 3.5rem;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    &::before {
+      margin-left: 2.5rem;
+      width: 36px;
+      height: 36px;
+    }
+
+    &::after {
+      margin-left: 4.5rem;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+//mobil
+.mobil {
+  position: relative;
+
+  margin-top: 1rem;
+  margin-left: 2rem;
+
+  h2 {
+    color: var(--color-primary) !important;
+  }
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 52px;
+    margin-left: 8px;
+    position: absolute;
+
+    left: -4.5rem;
+    background-image: url("/assets/icons/iphone.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    margin-left: 5.5rem;
+    position: absolute;
+
+    background-image: url("/assets/icons/trend-up.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include responsive.max(1400px) {
+    margin-left: -1rem;
+
+    &::before {
+      margin-left: 0.5rem;
+    }
+
+    &::after {
+      margin-left: 5.5rem;
+    }
+  }
+
+  @include responsive.max(1200px) {
+    margin-left: -4rem;
+    h2 {
+      font-size: 2rem !important;
+    }
+
+    &::before {
+      margin-left: 1rem;
+
+      height: 35px;
+    }
+
+    &::after {
+      margin-left: 4rem;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+//Geo
+#geo {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 200px;
+    height: 350px;
+    border-radius: var(--border-radius-big);
+
+    position: absolute;
+
+    bottom: -150px;
+    right: 10px;
+    background-image: url("/assets/images/map.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.submain__box-text {
+  padding-top: 1rem;
 }

@@ -146,10 +146,10 @@ input[type=submit] {
   flex-direction: column;
   background-color: var(--color-dark);
   gap: 4rem;
-  height: 100vh;
 }
 .sidebar .logo {
   margin: 3rem auto 0;
+  margin-left: 3rem;
 }
 .sidebar .logo img {
   width: 7rem;
@@ -158,7 +158,6 @@ input[type=submit] {
   position: sticky;
   top: 0;
   background-color: var(--color-dark);
-  height: 100%;
 }
 .sidebar nav .nav-list {
   margin: 0;
@@ -244,7 +243,12 @@ input[type=submit] {
   font-size: 13px;
 }
 .submain__box-container .submain__box-card .submain__box-title {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 1100px) {
+  .submain__box-container .submain__box-card .submain__box-title {
+    font-size: 0.8rem;
+  }
 }
 .submain__box-container .submain__box-rows-1 {
   display: grid;
@@ -253,7 +257,7 @@ input[type=submit] {
 }
 .submain__box-container .basta-inlagg,
 .submain__box-container .klick-inlagg {
-  grid-column: span 6;
+  grid-column: span 4;
 }
 .submain__box-container .antal-foljare,
 .submain__box-container .nya-foljare,
@@ -264,7 +268,7 @@ input[type=submit] {
   grid-column: span 8;
 }
 .submain__box-container .geo {
-  grid-column: span 4;
+  grid-column: span 8;
 }
 .submain__box-container .enheter__container {
   display: flex;
@@ -279,6 +283,243 @@ input[type=submit] {
 .submain__box-container .dator {
   border-right: 1px solid rgba(252, 252, 252, 0.3294117647);
   padding-right: 6rem;
+}
+
+#antal-foljare {
+  color: var(--color-primary);
+  position: relative;
+}
+#antal-foljare::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-left: 8px;
+  position: absolute;
+  top: 5px;
+  background-image: url("/assets/icons/trend-up.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.antal-foljare .submain__box-subheader {
+  margin-top: 2rem;
+  margin-bottom: -0.5rem;
+}
+
+#nya-foljare {
+  color: var(--color-primary);
+  position: relative;
+}
+#nya-foljare::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-left: 8px;
+  position: absolute;
+  top: 5px;
+  background-image: url("/assets/icons/trend-up.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nya-foljare .submain__box-subheader {
+  margin-top: 2rem;
+  margin-bottom: -0.5rem;
+}
+
+#okning-foljare {
+  color: var(--color-complementary);
+  position: relative;
+}
+#okning-foljare::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-left: 8px;
+  position: absolute;
+  top: 5px;
+  background-image: url("/assets/icons/trend-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.okning-foljare .submain__box-subheader {
+  margin-top: 2rem;
+  margin-bottom: -0.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .basta-inlagg h4 {
+    font-size: 1.5rem !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .basta-inlagg h4 {
+    font-size: 1rem !important;
+  }
+  .basta-inlagg p {
+    font-size: 0.6rem !important;
+  }
+}
+
+.dator {
+  position: relative;
+  margin-left: 5.5rem;
+  margin-top: 1rem;
+  padding-right: 10rem !important;
+}
+.dator h2 {
+  color: var(--color-complementary) !important;
+}
+.dator::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 58px;
+  margin-left: 8px;
+  position: absolute;
+  left: -6rem;
+  background-image: url("/assets/icons/desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.dator::after {
+  content: "";
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin-left: 6rem;
+  position: absolute;
+  background-image: url("/assets/icons/trend-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1400px) {
+  .dator {
+    padding-right: 8rem !important;
+    margin-left: 4.5rem;
+  }
+  .dator::before {
+    margin-left: 1.5rem;
+  }
+  .dator::after {
+    margin-left: 6rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .dator {
+    padding-right: 4rem !important;
+    margin-left: 3.5rem;
+  }
+  .dator h2 {
+    font-size: 2rem !important;
+  }
+  .dator p {
+    margin: 0;
+    padding: 0;
+  }
+  .dator::before {
+    margin-left: 2.5rem;
+    width: 36px;
+    height: 36px;
+  }
+  .dator::after {
+    margin-left: 4.5rem;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.mobil {
+  position: relative;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+.mobil h2 {
+  color: var(--color-primary) !important;
+}
+.mobil::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 52px;
+  margin-left: 8px;
+  position: absolute;
+  left: -4.5rem;
+  background-image: url("/assets/icons/iphone.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mobil::after {
+  content: "";
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin-left: 5.5rem;
+  position: absolute;
+  background-image: url("/assets/icons/trend-up.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1400px) {
+  .mobil {
+    margin-left: -1rem;
+  }
+  .mobil::before {
+    margin-left: 0.5rem;
+  }
+  .mobil::after {
+    margin-left: 5.5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mobil {
+    margin-left: -4rem;
+  }
+  .mobil h2 {
+    font-size: 2rem !important;
+  }
+  .mobil::before {
+    margin-left: 1rem;
+    height: 35px;
+  }
+  .mobil::after {
+    margin-left: 4rem;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#geo {
+  position: relative;
+}
+#geo::after {
+  content: "";
+  display: inline-block;
+  width: 200px;
+  height: 350px;
+  border-radius: var(--border-radius-big);
+  position: absolute;
+  bottom: -150px;
+  right: 10px;
+  background-image: url("/assets/images/map.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.submain__box-text {
+  padding-top: 1rem;
 }
 
 .container {

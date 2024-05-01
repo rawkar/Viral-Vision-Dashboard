@@ -1,0 +1,97 @@
+{
+    "overview": {
+      "linkedin": {
+        "totalFollowers": 4200,
+        "newFollowers": 45,
+        "growthPercentage": "1.1%",
+        "clicks": {
+          "bestPost": {
+            "Klick":" 190 klick",
+            "Visningar": "1200 visningar"
+          },
+          "totalClicks": "4150 klick ",
+          "changeLastMonth": "+5%"
+        },
+        "deviceUsage": {
+          "desktop": " Desktop 39%",
+          "mobile": "Mobil 61%"
+        },
+        "geography": {
+          "Sverige": "1. Sverige - 98.7%",
+          "Finland": "2. Finland - 0.8%",
+          "Norge": "3. Norge - 0.2%"
+        }
+      },
+      "instagram": {
+        "totalFollowers": 3500,
+        "newFollowers": 60,
+        "growthPercentage": "1.7%",
+        "clicks": {
+          "bestPost": {
+            "Klick": 150,
+            "Visningar": 2200
+          },
+          "totalClicks": 3600,
+          "changeLastMonth": "-3%"
+        },
+        "deviceUsage": {
+          "desktop": "25%",
+          "mobile": "75%"
+        },
+        "geography": {
+          "Sverige": "90%",
+          "Norge": "5%",
+          "Danmark": "5%"
+        }
+      },
+      "facebook": {
+        "totalFollowers": 2900,
+        "newFollowers": 35,
+        "growthPercentage": "1.2%",
+        "clicks": {
+          "bestPost": {
+            "Klick": 75,
+            "Visningar": 1600
+          },
+          "totalClicks": 3200,
+          "changeLastMonth": "+7%"
+        },
+        "deviceUsage": {
+          "desktop": "45%",
+          "mobile": "55%"
+        },
+        "geography": {
+          "Sverige": "95%",
+          "Irland": "3%",
+          "Storbritannien": "2%"
+        }
+      }, 
+        "summary": {
+          "clicksPercentage": "12%",
+          "viewsPercentage": "8%",
+          "platforms": {
+            "linkedin": {
+              "growthPercentage": "1.9%"
+            },
+            "instagram": {
+              "growthPercentage": "2.2%"
+            },
+            "facebook": {
+              "growthPercentage": "3.1%"
+            }
+          },
+          "deviceUsage": {
+            "desktop": "39%",
+            "mobile": "61%"
+          },
+          "geography": {
+            "Sverige": "94.7%",
+            "Finland": "0.8%",
+            "Norge": "3.2%"
+          }
+        }
+      }
+      
+    }
+  
+  
