@@ -120,7 +120,6 @@
 .antal-foljare {
   .submain__box-subheader {
     margin-top: 2rem;
-    margin-bottom: -0.5rem;
   }
 }
 
@@ -147,7 +146,6 @@
 .nya-foljare {
   .submain__box-subheader {
     margin-top: 2rem;
-    margin-bottom: -0.5rem;
   }
 }
 
@@ -172,10 +170,20 @@
   }
 }
 
-.okning-foljare {
-  .submain__box-subheader {
-    margin-top: 2rem;
-    margin-bottom: -0.5rem;
+.submain__box-subheader {
+  margin-top: 2rem;
+  margin-bottom: -0.5rem;
+
+  @include responsive.max(1100px) {
+    font-size: 0.7rem;
+  }
+}
+
+.submain__box-text {
+  opacity: 50%;
+
+  @include responsive.max(1100px) {
+    font-size: 0.6rem !important;
   }
 }
 
@@ -186,18 +194,11 @@
     h4 {
       font-size: 1.5rem !important;
     }
-
-    p {
-    }
   }
 
   @include responsive.max(1100px) {
     h4 {
-      font-size: 1rem !important;
-    }
-
-    p {
-      font-size: 0.6rem !important;
+      font-size: 0.9rem !important;
     }
   }
 }
@@ -230,23 +231,24 @@
 //Dator
 .dator {
   position: relative;
-  margin-left: 5.5rem;
+  margin-left: 4.5rem;
 
   margin-top: 1rem;
-  padding-right: 10rem !important;
+  padding-right: 10rem;
 
-  h2 {
-    color: var(--color-complementary) !important;
-  }
+  color: var(--color-complementary);
+  font-size: var(--font-size-3);
+  font-weight: 600;
+
   &::before {
     content: "";
     display: inline-block;
-    width: 50px;
-    height: 58px;
+    width: 40px;
+    height: 48px;
     margin-left: 8px;
     position: absolute;
 
-    left: -6rem;
+    left: -5rem;
     background-image: url("/assets/icons/desktop.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -256,9 +258,9 @@
   &::after {
     content: "";
     display: inline-block;
-    width: 46px;
-    height: 46px;
-    margin-left: 6rem;
+    width: 30px;
+    height: 30px;
+    margin-left: 10.5rem;
     position: absolute;
 
     background-image: url("/assets/icons/trend-down.svg");
@@ -269,26 +271,24 @@
 
   @include responsive.max(1400px) {
     padding-right: 8rem !important;
+    font-size: var(--font-size-2);
+    padding-right: 5rem !important;
 
-    margin-left: 4.5rem;
+    margin-left: 3.5rem;
 
     &::before {
       margin-left: 1.5rem;
     }
 
     &::after {
-      margin-left: 6rem;
+      margin-left: 8.5rem;
     }
   }
 
   @include responsive.max(1200px) {
-    padding-right: 4rem !important;
-
-    h2 {
-      font-size: 2rem !important;
-    }
-
-    margin-left: 3.5rem;
+    padding-right: 3.5rem !important;
+    margin-left: 0rem !important;
+    font-size: var(--font-size-2);
 
     p {
       margin: 0;
@@ -296,15 +296,13 @@
     }
 
     &::before {
-      margin-left: 2.5rem;
-      width: 36px;
-      height: 36px;
+      display: none;
     }
 
     &::after {
-      margin-left: 4.5rem;
-      width: 30px;
-      height: 30px;
+      margin-left: 8.5rem;
+      width: 25px;
+      height: 25px;
     }
   }
 }
@@ -314,16 +312,17 @@
   position: relative;
 
   margin-top: 1rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 
-  h2 {
-    color: var(--color-primary) !important;
-  }
+  color: var(--color-primary) !important;
+  font-size: var(--font-size-3);
+  font-weight: 600;
+
   &::before {
     content: "";
     display: inline-block;
-    width: 50px;
-    height: 52px;
+    width: 40px;
+    height: 42px;
     margin-left: 8px;
     position: absolute;
 
@@ -337,9 +336,9 @@
   &::after {
     content: "";
     display: inline-block;
-    width: 46px;
-    height: 46px;
-    margin-left: 5.5rem;
+    width: 30px;
+    height: 30px;
+    margin-left: 8rem;
     position: absolute;
 
     background-image: url("/assets/icons/trend-up.svg");
@@ -350,32 +349,31 @@
 
   @include responsive.max(1400px) {
     margin-left: -1rem;
+    font-size: var(--font-size-2);
+    margin-left: -2rem;
 
     &::before {
-      margin-left: 0.5rem;
+      margin-left: 1rem;
     }
 
     &::after {
-      margin-left: 5.5rem;
+      margin-left: 6.5rem;
     }
   }
 
   @include responsive.max(1200px) {
-    margin-left: -4rem;
-    h2 {
-      font-size: 2rem !important;
-    }
+    margin-left: -5.6rem;
+
+    font-size: var(--font-size-2);
 
     &::before {
-      margin-left: 1rem;
-
-      height: 35px;
+      display: none;
     }
 
     &::after {
-      margin-left: 4rem;
-      width: 30px;
-      height: 30px;
+      margin-left: 6.45rem;
+      width: 25px;
+      height: 25px;
     }
   }
 }
@@ -387,21 +385,38 @@
   &::after {
     content: "";
     display: inline-block;
-    width: 200px;
-    height: 350px;
+    width: 150px;
+    height: 200px;
     border-radius: var(--border-radius-big);
 
     position: absolute;
 
-    bottom: -150px;
+    bottom: -60px;
     right: 10px;
     background-image: url("/assets/images/map.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  @include responsive.max(1100px) {
+    &::after {
+      width: 120px;
+      height: 180px;
+      bottom: -45px;
+    }
+  }
 }
 
-.submain__box-text {
-  padding-top: 1rem;
+.klick-inlagg {
+  @include responsive.max(1200px) {
+    &::after {
+    }
+  }
+
+  @include responsive.max(1100px) {
+    h4 {
+      font-size: 0.9rem !important;
+    }
+  }
 }

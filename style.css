@@ -305,7 +305,6 @@ input[type=submit] {
 
 .antal-foljare .submain__box-subheader {
   margin-top: 2rem;
-  margin-bottom: -0.5rem;
 }
 
 #nya-foljare {
@@ -328,7 +327,6 @@ input[type=submit] {
 
 .nya-foljare .submain__box-subheader {
   margin-top: 2rem;
-  margin-bottom: -0.5rem;
 }
 
 #okning-foljare {
@@ -349,9 +347,23 @@ input[type=submit] {
   background-position: center;
 }
 
-.okning-foljare .submain__box-subheader {
+.submain__box-subheader {
   margin-top: 2rem;
   margin-bottom: -0.5rem;
+}
+@media screen and (max-width: 1100px) {
+  .submain__box-subheader {
+    font-size: 0.7rem;
+  }
+}
+
+.submain__box-text {
+  opacity: 50%;
+}
+@media screen and (max-width: 1100px) {
+  .submain__box-text {
+    font-size: 0.6rem !important;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -361,30 +373,27 @@ input[type=submit] {
 }
 @media screen and (max-width: 1100px) {
   .basta-inlagg h4 {
-    font-size: 1rem !important;
-  }
-  .basta-inlagg p {
-    font-size: 0.6rem !important;
+    font-size: 0.9rem !important;
   }
 }
 
 .dator {
   position: relative;
-  margin-left: 5.5rem;
+  margin-left: 4.5rem;
   margin-top: 1rem;
-  padding-right: 10rem !important;
-}
-.dator h2 {
-  color: var(--color-complementary) !important;
+  padding-right: 10rem;
+  color: var(--color-complementary);
+  font-size: var(--font-size-3);
+  font-weight: 600;
 }
 .dator::before {
   content: "";
   display: inline-block;
-  width: 50px;
-  height: 58px;
+  width: 40px;
+  height: 48px;
   margin-left: 8px;
   position: absolute;
-  left: -6rem;
+  left: -5rem;
   background-image: url("/assets/icons/desktop.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -393,9 +402,9 @@ input[type=submit] {
 .dator::after {
   content: "";
   display: inline-block;
-  width: 46px;
-  height: 46px;
-  margin-left: 6rem;
+  width: 30px;
+  height: 30px;
+  margin-left: 10.5rem;
   position: absolute;
   background-image: url("/assets/icons/trend-down.svg");
   background-size: contain;
@@ -405,52 +414,50 @@ input[type=submit] {
 @media screen and (max-width: 1400px) {
   .dator {
     padding-right: 8rem !important;
-    margin-left: 4.5rem;
+    font-size: var(--font-size-2);
+    padding-right: 5rem !important;
+    margin-left: 3.5rem;
   }
   .dator::before {
     margin-left: 1.5rem;
   }
   .dator::after {
-    margin-left: 6rem;
+    margin-left: 8.5rem;
   }
 }
 @media screen and (max-width: 1200px) {
   .dator {
-    padding-right: 4rem !important;
-    margin-left: 3.5rem;
-  }
-  .dator h2 {
-    font-size: 2rem !important;
+    padding-right: 3.5rem !important;
+    margin-left: 0rem !important;
+    font-size: var(--font-size-2);
   }
   .dator p {
     margin: 0;
     padding: 0;
   }
   .dator::before {
-    margin-left: 2.5rem;
-    width: 36px;
-    height: 36px;
+    display: none;
   }
   .dator::after {
-    margin-left: 4.5rem;
-    width: 30px;
-    height: 30px;
+    margin-left: 8.5rem;
+    width: 25px;
+    height: 25px;
   }
 }
 
 .mobil {
   position: relative;
   margin-top: 1rem;
-  margin-left: 2rem;
-}
-.mobil h2 {
+  margin-left: 1rem;
   color: var(--color-primary) !important;
+  font-size: var(--font-size-3);
+  font-weight: 600;
 }
 .mobil::before {
   content: "";
   display: inline-block;
-  width: 50px;
-  height: 52px;
+  width: 40px;
+  height: 42px;
   margin-left: 8px;
   position: absolute;
   left: -4.5rem;
@@ -462,9 +469,9 @@ input[type=submit] {
 .mobil::after {
   content: "";
   display: inline-block;
-  width: 46px;
-  height: 46px;
-  margin-left: 5.5rem;
+  width: 30px;
+  height: 30px;
+  margin-left: 8rem;
   position: absolute;
   background-image: url("/assets/icons/trend-up.svg");
   background-size: contain;
@@ -474,29 +481,28 @@ input[type=submit] {
 @media screen and (max-width: 1400px) {
   .mobil {
     margin-left: -1rem;
+    font-size: var(--font-size-2);
+    margin-left: -2rem;
   }
   .mobil::before {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
   }
   .mobil::after {
-    margin-left: 5.5rem;
+    margin-left: 6.5rem;
   }
 }
 @media screen and (max-width: 1200px) {
   .mobil {
-    margin-left: -4rem;
-  }
-  .mobil h2 {
-    font-size: 2rem !important;
+    margin-left: -5.6rem;
+    font-size: var(--font-size-2);
   }
   .mobil::before {
-    margin-left: 1rem;
-    height: 35px;
+    display: none;
   }
   .mobil::after {
-    margin-left: 4rem;
-    width: 30px;
-    height: 30px;
+    margin-left: 6.45rem;
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -506,20 +512,29 @@ input[type=submit] {
 #geo::after {
   content: "";
   display: inline-block;
-  width: 200px;
-  height: 350px;
+  width: 150px;
+  height: 200px;
   border-radius: var(--border-radius-big);
   position: absolute;
-  bottom: -150px;
+  bottom: -60px;
   right: 10px;
   background-image: url("/assets/images/map.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (max-width: 1100px) {
+  #geo::after {
+    width: 120px;
+    height: 180px;
+    bottom: -45px;
+  }
+}
 
-.submain__box-text {
-  padding-top: 1rem;
+@media screen and (max-width: 1100px) {
+  .klick-inlagg h4 {
+    font-size: 0.9rem !important;
+  }
 }
 
 .container {
