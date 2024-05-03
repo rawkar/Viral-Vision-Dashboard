@@ -1,3 +1,5 @@
+@use "../utilities/responsive";
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -30,7 +32,6 @@
         padding: 1rem 2rem;
         margin-left: 1rem;
         border-radius: 100vw 0 0 100vw;
-
         a {
           display: flex;
           align-items: center;
@@ -75,6 +76,88 @@
         color: var(--color-light);
         text-decoration: none;
       }
+    }
+  }
+
+  @include responsive.max(680px) {
+    width: 5rem;
+
+    .logo {
+      margin: 3rem auto 0;
+
+      img {
+        width: 3rem;
+      }
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: var(--color-dark);
+
+      .nav-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 2rem;
+        padding-block: 2rem;
+
+        li {
+          padding: 1rem 1rem;
+          margin-left: 1rem;
+          border-radius: 100vw 0 0 100vw;
+          a {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.8rem;
+          }
+
+          &.active {
+            background: var(--color-light);
+            position: relative;
+            a {
+              color: var(--color-dark);
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            }
+
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              width: var(--border-radius-big);
+              height: var(--border-radius-big);
+              background-color: var(--color-dark);
+              right: 0;
+            }
+
+            &::before {
+              top: calc(var(--border-radius-big) * -1);
+              border-radius: 0 0 100vw 0;
+              box-shadow: 5px 5px 0 5px var(--color-light);
+            }
+
+            &::after {
+              bottom: calc(var(--border-radius-big) * -1);
+              border-radius: 0 100vw 0 0;
+              box-shadow: 5px -5px 0 5px var(--color-light);
+            }
+          }
+        }
+
+        a {
+          color: var(--color-light);
+          text-decoration: none;
+        }
+      }
+    }
+
+    nav .nav-list li a span {
+      // Specifika regler för att dölja texten
+      display: none;
     }
   }
 }

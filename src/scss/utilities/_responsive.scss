@@ -8,6 +8,12 @@
   }
 }
 
+@mixin max($width: 900px) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
 // Responsive when screen is min
 //Usage:
 //@include responsive.min(600px) { ... }
@@ -37,6 +43,18 @@
 }
 
 @mixin min($width: 900px) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin min($width: 680px) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin min($width: 500px) {
   @media screen and (min-width: $width) {
     @content;
   }

@@ -34,14 +34,15 @@ function formateraObjektTillHTML(data) {
 
 // Funktion för att hantera och distribuera data
 function hanteraData(data) {
-    uppdateraElement(antalFoljare, data.linkedin.totalFollowers, 'Kunde inte ladda antal följare');
-    uppdateraElement(nyaFoljare, data.linkedin.newFollowers, 'Data saknas');
-    uppdateraElement(okningFoljare, data.linkedin.growthPercentage, 'Data saknas');
-    uppdateraElement(bastaInlagg, data.linkedin.clicks.bestPost, 'Data saknas'); // Uppdaterad sökväg
+    uppdateraElement(antalFoljare, data.facebook.totalFollowers, 'Kunde inte ladda antal följare');
+    uppdateraElement(nyaFoljare, data.facebook.newFollowers, 'Data saknas');
+    uppdateraElement(okningFoljare, data.facebook.growthPercentage, 'Data saknas');
+    uppdateraElement(bastaInlagg, data.facebook.clicks.bestPost, 'Data saknas'); // Uppdaterad sökväg
     uppdateraElement(klickInlagg, data.linkedin.clicks.allClicks, 'Data saknas');
-    uppdateraElement(dator, data.linkedin.deviceUsage.desktop, 'Data saknas');
-    uppdateraElement(mobil, data.linkedin.deviceUsage.mobile, 'Data saknas');
-    uppdateraElement(geo, data.linkedin.geography, 'Data saknas');
+
+    uppdateraElement(dator, data.facebook.deviceUsage.desktop, 'Data saknas');
+    uppdateraElement(mobil, data.facebook.deviceUsage.mobile, 'Data saknas');
+    uppdateraElement(geo, data.facebook.geography, 'Data saknas');
   }
   
   fetch('http://localhost:3001/overview/')

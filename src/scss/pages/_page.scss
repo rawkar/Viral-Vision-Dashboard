@@ -4,6 +4,12 @@
   display: grid;
   grid-template-columns: minmax(32px, 1fr) minmax(0, 80rem) minmax(32px, 1fr);
 
+  @include responsive.max(680px) {
+    .submain__title {
+      font-size: var(--font-size-4);
+    }
+  }
+
   &__inner {
     grid-column: 2/3;
   }
@@ -40,7 +46,7 @@
       }
 
       .submain__box-title {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
 
         @include responsive.max(1100px) {
           font-size: 0.8rem;
@@ -48,7 +54,7 @@
       }
     }
 
-    .submain__box-rows-1 {
+    .submain__box-rows {
       display: grid;
 
       grid-template-columns: repeat(12, 1fr);
@@ -66,24 +72,61 @@
       grid-column: span 4;
     }
 
-    .enheter {
+    .enheter,
+    .geo {
       grid-column: span 8;
     }
 
-    .geo {
-      grid-column: span 8;
+    @include responsive.max(900px) {
+      .submain__box-rows {
+        grid-template-columns: 1fr; // Endast en kolumn, så alla kort tar upp hela raden
+
+        .basta-inlagg,
+        .klick-inlagg,
+        .antal-foljare,
+        .nya-foljare,
+        .okning-foljare,
+        .enheter,
+        .geo {
+          grid-column: 1 / -1; // Alla kort tar upp hela bredden
+        }
+      }
     }
 
     // Enheter
     .enheter__container {
       display: flex;
       gap: 8rem;
+
+      @include responsive.max(680px) {
+        flex-direction: column;
+        gap: 0rem;
+        padding: 0;
+
+        align-items: center;
+
+        .dator {
+          border: none;
+          padding: 0 !important;
+
+          margin: 0;
+        }
+
+        .mobil {
+          padding: 0 !important;
+          margin: 1rem 0 2rem !important;
+        }
+      }
     }
     .dator,
     .mobil {
       display: flex;
       align-items: center;
       gap: 1rem;
+
+      @include responsive.max(900px) {
+        margin-bottom: 2rem;
+      }
     }
     .dator {
       border-right: 1px solid #fcfcfc54;
@@ -92,9 +135,15 @@
   }
 }
 
-//Styling
+.center-text {
+  text-align: center;
+  margin-left: -3rem;
+  @include responsive.max(500px) {
+    font-size: var(--font-size-4);
+  }
+}
 
-//LINKEDIN
+//Styling
 
 // Antal följare
 
@@ -104,22 +153,23 @@
   &::after {
     content: "";
     display: inline-block;
-    width: 36px;
-    height: 36px;
+    width: 46px;
+    height: 46px;
     margin-left: 8px;
     position: absolute;
-
-    top: 5px;
+    bottom: 16px;
     background-image: url("/assets/icons/trend-up.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-  }
-}
 
-.antal-foljare {
-  .submain__box-subheader {
-    margin-top: 2rem;
+    @include responsive.max(500px) {
+      width: 36px;
+      height: 36px;
+      margin-left: 8px;
+      position: absolute;
+      bottom: 10px;
+    }
   }
 }
 
@@ -130,22 +180,23 @@
   &::after {
     content: "";
     display: inline-block;
-    width: 36px;
-    height: 36px;
+    width: 46px;
+    height: 46px;
     margin-left: 8px;
     position: absolute;
-
-    top: 5px;
+    bottom: 16px;
     background-image: url("/assets/icons/trend-up.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-  }
-}
 
-.nya-foljare {
-  .submain__box-subheader {
-    margin-top: 2rem;
+    @include responsive.max(500px) {
+      width: 36px;
+      height: 36px;
+      margin-left: 8px;
+      position: absolute;
+      bottom: 10px;
+    }
   }
 }
 
@@ -157,23 +208,29 @@
   &::after {
     content: "";
     display: inline-block;
-    width: 36px;
-    height: 36px;
+    width: 46px;
+    height: 46px;
     margin-left: 8px;
     position: absolute;
-
-    top: 5px;
+    bottom: 16px;
     background-image: url("/assets/icons/trend-down.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include responsive.max(500px) {
+      width: 36px;
+      height: 36px;
+      margin-left: 8px;
+      position: absolute;
+      bottom: 10px;
+    }
   }
 }
 
 .submain__box-subheader {
   margin-top: 2rem;
   margin-bottom: -0.5rem;
-
   @include responsive.max(1100px) {
     font-size: 0.7rem;
   }
@@ -190,6 +247,12 @@
 //Bästa inlägg
 
 .basta-inlagg {
+  .submain__box-content {
+    text-align: center;
+    @include responsive.max(900px) {
+      margin-bottom: 2rem;
+    }
+  }
   @include responsive.max(1200px) {
     h4 {
       font-size: 1.5rem !important;
@@ -201,32 +264,19 @@
       font-size: 0.9rem !important;
     }
   }
+
+  @include responsive.max(900px) {
+    h4 {
+      font-size: var(--font-size-3) !important;
+    }
+  }
+
+  @include responsive.max(500px) {
+    h4 {
+      font-size: 0.9rem !important;
+    }
+  }
 }
-
-// #klick-inlagg-change {
-//   color: var(--color-primary);
-//   position: relative;
-//   &::after {
-//     content: "";
-//     display: inline-block;
-//     width: 26px;
-//     height: 26px;
-//     margin-left: 8px;
-//     position: absolute;
-
-//     top: 6px;
-//     background-image: url("/assets/icons/trend-up.svg");
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//   }
-
-//   @include responsive.max(1200px) {
-//     h4 {
-//       font-size: 1rem;
-//     }
-//   }
-// }
 
 //Dator
 .dator {
@@ -260,7 +310,7 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin-left: 10.5rem;
+    margin-left: 12rem;
     position: absolute;
 
     background-image: url("/assets/icons/trend-down.svg");
@@ -281,14 +331,14 @@
     }
 
     &::after {
-      margin-left: 8.5rem;
+      margin-left: 9rem;
     }
   }
 
   @include responsive.max(1200px) {
     padding-right: 3.5rem !important;
     margin-left: 0rem !important;
-    font-size: var(--font-size-2);
+    font-size: 1.2rem;
 
     p {
       margin: 0;
@@ -300,9 +350,19 @@
     }
 
     &::after {
-      margin-left: 8.5rem;
+      margin-left: 8.2rem;
       width: 25px;
       height: 25px;
+    }
+  }
+
+  @include responsive.max(500px) {
+    padding-right: 3.5rem !important;
+    margin-left: 0rem !important;
+    font-size: 1rem;
+
+    &::after {
+      display: none;
     }
   }
 }
@@ -338,7 +398,7 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin-left: 8rem;
+    margin-left: 9rem;
     position: absolute;
 
     background-image: url("/assets/icons/trend-up.svg");
@@ -357,30 +417,42 @@
     }
 
     &::after {
-      margin-left: 6.5rem;
+      margin-left: 7rem;
     }
   }
 
   @include responsive.max(1200px) {
-    margin-left: -5.6rem;
+    margin-left: -6.5rem;
 
-    font-size: var(--font-size-2);
+    font-size: 1.2rem;
 
     &::before {
       display: none;
     }
 
     &::after {
-      margin-left: 6.45rem;
+      margin-left: 6.2rem;
       width: 25px;
       height: 25px;
+    }
+  }
+
+  @include responsive.max(500px) {
+    font-size: 1rem;
+
+    &::after {
+      display: none;
     }
   }
 }
 
 //Geo
-#geo {
+.geo {
   position: relative;
+
+  .submain__box-content {
+    margin-bottom: 2rem;
+  }
 
   &::after {
     content: "";
@@ -391,8 +463,8 @@
 
     position: absolute;
 
-    bottom: -60px;
-    right: 10px;
+    top: 10px;
+    right: 30px;
     background-image: url("/assets/images/map.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -406,15 +478,44 @@
       bottom: -45px;
     }
   }
+
+  @include responsive.max(680px) {
+    .submain__box-content {
+      text-align: center;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  @include responsive.max(680px) {
+    .submain__box-content {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 .klick-inlagg {
-  @include responsive.max(1200px) {
-    &::after {
+  .submain__box-content {
+    text-align: center;
+    @include responsive.max(900px) {
+      margin-bottom: 2rem;
     }
   }
 
   @include responsive.max(1100px) {
+    h4 {
+      font-size: 0.9rem !important;
+    }
+  }
+
+  @include responsive.max(900px) {
+    h4 {
+      font-size: var(--font-size-3) !important;
+    }
+  }
+
+  @include responsive.max(500px) {
     h4 {
       font-size: 0.9rem !important;
     }

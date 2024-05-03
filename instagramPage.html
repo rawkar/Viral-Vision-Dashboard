@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
+    <script src="/js/instagram.js" defer></script>
+    <title>Viral Vision Dashboard</title>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                         <a href="/index.html">
                             <svg width="23" height="24" viewBox="0 0 23 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.0364 18.7522H3.53638V11.0856L11.7864 2.93973L20.0364 11.0856V18.7522Z"
+                                <path d="M20.0364 18.7522h2.53638V11.0856L11.7864 2.93973L20.0364 11.0856V18.7522Z"
                                     fill="#E8EAF6" />
                                 <path
                                     d="M18.6614 10.1272L16.3697 7.73139V4.37723H18.6614V10.1272ZM3.53638 18.7522H20.0364V21.1481H3.53638V18.7522Z"
@@ -37,7 +38,7 @@
                                 <path
                                     d="M13.3905 17.0751C13.253 17.0751 13.1614 17.171 13.1614 17.3147V18.2731C13.1614 18.4168 13.253 18.5126 13.3905 18.5126C13.528 18.5126 13.6197 18.4168 13.6197 18.2731V17.3147C13.6197 17.171 13.528 17.0751 13.3905 17.0751Z"
                                     fill="#FF8A65" />
-                            </svg> Start
+                            </svg> <span>Start</span>
                         </a>
                     </li>
                     <li>
@@ -57,7 +58,9 @@
                                             transform="translate(0.380371 0.574387)" />
                                     </clipPath>
                                 </defs>
-                            </svg> LinkedIn</a>
+                            </svg> <span>LinkedIn</span>
+
+                        </a>
                     </li>
                     <li class="active">
                         <a href="/instagramPage.html" aria-current="page"><svg width="19" height="19"
@@ -95,7 +98,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            Instagram</a>
+                            <span>Instagram</span></a>
                     </li>
                     <li>
                         <a href="/facebookPage.html"><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
@@ -115,7 +118,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            Facebook</a>
+                            <span>Facebook</span></a>
                     </li>
 
                 </ul>
@@ -123,10 +126,106 @@
 
         </div>
 
-        <main class="main">
+        <main class="submain">
 
-            <div class="main__inner">
-                <h1 class="main__title">Instagram</h1>
+            <div class="submain__inner">
+                <h1 class="submain__title">Instagram</h1>
+
+                <div class="submain__box-container">
+
+
+
+                    <!-- Rad -->
+                    <div class="submain__box-rows">
+
+                        <!-- Rad 1 -->
+                        <div class="submain__box-card antal-foljare">
+                            <h6 class="submain__box-title">Antal följare</h6>
+                            <h2 id="antal-foljare" class="submain__box-content center-text"> 55K
+                            </h2>
+                            <h6 class="submain__box-subheader">Lorem ipsum dolor</h6>
+                            <p class="submain__box-text">Lorem ipsum dolor sit amet consectetur. </p>
+                        </div>
+                        <div class="submain__box-card nya-foljare">
+
+                            <h6 class="submain__box-title">Nya följare</h6>
+                            <h2 id="nya-foljare" class="submain__box-content center-text">950
+                            </h2>
+                            <h6 class="submain__box-subheader">Lorem ipsum dolor</h6>
+                            <p class="submain__box-text">Lorem ipsum dolor sit amet consectetur. </p>
+                        </div>
+
+                        <div class="submain__box-card okning-foljare">
+
+                            <h6 class="submain__box-title">Ökning av följare</h6>
+                            <h2 id="okning-foljare" class="submain__box-content center-text"> 1.2%
+                            </h2>
+                            <h6 class="submain__box-subheader">Lorem ipsum dolor</h6>
+                            <p class="submain__box-text">Lorem ipsum dolor sit amet consectetur. </p>
+                        </div>
+
+                        <!-- Rad 2 -->
+
+                        <div class="submain__box-card enheter">
+                            <h6 class="submain__box-title">Enheter</h6>
+
+                            <div id="enheter" class="enheter__container">
+                                <div id="dator" class="dator">
+
+                                    <h2 class="submain__box-content">
+
+
+                                    </h2>
+
+
+
+                                </div>
+
+                                <div id="mobil" class="mobil">
+
+
+                                    <h2 class="submain__box-content">
+                                        61%
+
+                                    </h2>
+
+
+
+
+                                </div>
+
+                            </div>
+                            <p class="submain__box-text">Lorem ipsum dolor sit amet consectetur. </p>
+                        </div>
+                        <div class="submain__box-card basta-inlagg">
+                            <h6 class="submain__box-title">Bästa inlägg</h6>
+                            <h4 id="basta-inlagg" class="submain__box-content">
+                            </h4>
+                            <p class="submain__box-text">Lorem ipsum dolor sit amet consectetur. </p>
+                        </div>
+
+
+                        <!-- Rad 3 -->
+
+
+                        <div class="submain__box-card geo">
+
+                            <h6 class="submain__box-title">Geografi</h6>
+                            <h6 id="geo" class="submain__box-content">
+                            </h6>
+                            <p class="submain__box-text">Lorem ipsum dolor sit amet consectetur. </p>
+                        </div>
+
+                        <div class="submain__box-card klick-inlagg">
+
+                            <h6 class="submain__box-title">Klick på inlägg</h6>
+                            <h4 id="klick-inlagg" class="submain__box-content ">
+                                </h5>
+                                <p class="submain__box-text">Lorem ipsum dolor sit amet consectetur. </p>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
 
