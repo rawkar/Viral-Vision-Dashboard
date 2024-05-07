@@ -79,7 +79,7 @@
 
     @include responsive.max(900px) {
       .submain__box-rows {
-        grid-template-columns: 1fr; // Endast en kolumn, så alla kort tar upp hela raden
+        grid-template-columns: 1fr;
 
         .basta-inlagg,
         .klick-inlagg,
@@ -88,7 +88,7 @@
         .okning-foljare,
         .enheter,
         .geo {
-          grid-column: 1 / -1; // Alla kort tar upp hela bredden
+          grid-column: 1 / -1;
         }
       }
     }
@@ -273,7 +273,7 @@
 
   @include responsive.max(500px) {
     h4 {
-      font-size: 0.9rem !important;
+      font-size: var(--font-size-2) !important;
     }
   }
 }
@@ -359,7 +359,7 @@
   @include responsive.max(500px) {
     padding-right: 3.5rem !important;
     margin-left: 0rem !important;
-    font-size: 1rem;
+    font-size: var(--font-size-2) !important;
 
     &::after {
       display: none;
@@ -438,7 +438,7 @@
   }
 
   @include responsive.max(500px) {
-    font-size: 1rem;
+    font-size: var(--font-size-2) !important;
 
     &::after {
       display: none;
@@ -482,15 +482,16 @@
   @include responsive.max(680px) {
     .submain__box-content {
       text-align: center;
+      font-size: var(--font-size-2) !important;
     }
     &::after {
       display: none;
     }
   }
 
-  @include responsive.max(680px) {
+  @include responsive.max(500px) {
     .submain__box-content {
-      font-size: 0.8rem;
+      font-size: var(--font-size-1) !important;
     }
   }
 }
@@ -517,7 +518,7 @@
 
   @include responsive.max(500px) {
     h4 {
-      font-size: 0.9rem !important;
+      font-size: var(--font-size-2) !important;
     }
   }
 }

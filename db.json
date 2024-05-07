@@ -73,8 +73,14 @@
       }
     },
     "summary": {
-      "clicksPercentage": "12%",
-      "viewsPercentage": "8%",
+      "trend": {
+        "clicksPercentage": "12% klick",
+        "viewsPercentage": "8% visningar"
+      },
+      "sammanfattning": {
+        "clicks": "10950 klick", 
+        "views": "11000 visningar" 
+      },
       "platforms": {
         "linkedin": {
           "growthPercentage": "1.9%"
@@ -87,13 +93,13 @@
         }
       },
       "deviceUsage": {
-        "desktop": "39%",
-        "mobile": "61%"
+        "desktop": "Desktop 37%", 
+        "mobile": "Mobil 63%" 
       },
       "geography": {
-        "Sverige": "94.7%",
-        "Finland": "0.8%",
-        "Norge": "3.2%"
+        "Sverige": "1. Sverige - 94.4%", 
+        "Finland": "2. Finland - 1.2%", 
+        "Norge": "3. Norge - 1.7%" 
       }
     }
   }

@@ -530,7 +530,7 @@ input[type=submit] {
 }
 @media screen and (max-width: 500px) {
   .basta-inlagg h4 {
-    font-size: 0.9rem !important;
+    font-size: var(--font-size-2) !important;
   }
 }
 
@@ -605,7 +605,7 @@ input[type=submit] {
   .dator {
     padding-right: 3.5rem !important;
     margin-left: 0rem !important;
-    font-size: 1rem;
+    font-size: var(--font-size-2) !important;
   }
   .dator::after {
     display: none;
@@ -674,7 +674,7 @@ input[type=submit] {
 }
 @media screen and (max-width: 500px) {
   .mobil {
-    font-size: 1rem;
+    font-size: var(--font-size-2) !important;
   }
   .mobil::after {
     display: none;
@@ -711,14 +711,15 @@ input[type=submit] {
 @media screen and (max-width: 680px) {
   .geo .submain__box-content {
     text-align: center;
+    font-size: var(--font-size-2) !important;
   }
   .geo::after {
     display: none;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 500px) {
   .geo .submain__box-content {
-    font-size: 0.8rem;
+    font-size: var(--font-size-1) !important;
   }
 }
 
@@ -742,7 +743,7 @@ input[type=submit] {
 }
 @media screen and (max-width: 500px) {
   .klick-inlagg h4 {
-    font-size: 0.9rem !important;
+    font-size: var(--font-size-2) !important;
   }
 }
 
@@ -796,25 +797,23 @@ input[type=submit] {
 .main__box-container .main__box-card .main__box-title {
   margin-bottom: 2rem;
 }
-.main__box-container .main__box-rows-1 {
+.main__box-container .main__box-rows {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
 }
 .main__box-container .sammanfattning,
-.main__box-container .trender {
-  grid-column: span 6;
+.main__box-container .sammanfattning-trender {
+  grid-column: span 4;
 }
 .main__box-container .instagram,
 .main__box-container .facebook,
 .main__box-container .linkedin {
   grid-column: span 4;
 }
-.main__box-container .enheter {
+.main__box-container .sammanfattning-enheter,
+.main__box-container .sammanfattning-geo {
   grid-column: span 8;
-}
-.main__box-container .geo {
-  grid-column: span 4;
 }
 .main__box-container .enheter__container {
   display: flex;
@@ -829,6 +828,257 @@ input[type=submit] {
 .main__box-container .dator {
   border-right: 1px solid rgba(252, 252, 252, 0.3294117647);
   padding-right: 6rem;
+}
+@media screen and (max-width: 900px) {
+  .main .main__box-rows {
+    grid-template-columns: 1fr;
+  }
+  .main .main__box-rows .instagram,
+  .main .main__box-rows .facebook,
+  .main .main__box-rows .linkedin,
+  .main .main__box-rows .sammanfattning-trender,
+  .main .main__box-rows .sammanfattning,
+  .main .main__box-rows .sammanfattning-enheter,
+  .main .main__box-rows .sammanfattning-geo {
+    grid-column: 1/-1;
+  }
+  .main .main__title {
+    font-size: var(--font-size-4);
+  }
+}
+@media screen and (max-width: 680px) {
+  .main .main__title {
+    font-size: var(--font-size-4);
+  }
+}
+
+#total-linkedin,
+#total-instagram,
+#total-facebook {
+  color: var(--color-primary);
+  position: relative;
+}
+#total-linkedin::after,
+#total-instagram::after,
+#total-facebook::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-left: 8px;
+  position: absolute;
+  bottom: 8px;
+  background-image: url("/assets/icons/trend-up.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 500px) {
+  #total-linkedin::after,
+  #total-instagram::after,
+  #total-facebook::after {
+    width: 36px;
+    height: 36px;
+    margin-left: 8px;
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
+.sammanfattning-dator {
+  position: relative;
+  margin-left: 4.5rem;
+  border-right: 1px solid rgba(252, 252, 252, 0.3294117647);
+  margin-top: 1rem;
+  padding-right: 6rem;
+  color: var(--color-complementary);
+  font-size: var(--font-size-3);
+  font-weight: 600;
+}
+.sammanfattning-dator::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 48px;
+  margin-left: 8px;
+  position: absolute;
+  left: -5rem;
+  background-image: url("/assets/icons/desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sammanfattning-dator::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 0.5rem;
+  position: absolute;
+  bottom: 8px;
+  background-image: url("/assets/icons/trend-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1400px) {
+  .sammanfattning-dator {
+    padding-right: 8rem !important;
+    font-size: var(--font-size-2);
+    padding-right: 5rem !important;
+    margin-left: 3.5rem;
+  }
+  .sammanfattning-dator::before {
+    margin-left: 1.5rem;
+    bottom: -8px;
+  }
+  .sammanfattning-dator::after {
+    margin-left: 0.5rem;
+    bottom: 4px;
+    height: 26px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .sammanfattning-dator {
+    padding-right: 3.5rem !important;
+    margin-left: 0rem !important;
+    font-size: 1.2rem;
+  }
+  .sammanfattning-dator p {
+    margin: 0;
+    padding: 0;
+  }
+  .sammanfattning-dator::before {
+    display: none;
+  }
+  .sammanfattning-dator::after {
+    margin-left: 0.2rem;
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sammanfattning-dator {
+    padding-right: 3.5rem !important;
+    margin-left: 0rem !important;
+    font-size: var(--font-size-2) !important;
+  }
+  .sammanfattning-dator::after {
+    display: none;
+  }
+}
+
+.sammanfattning-mobil {
+  position: relative;
+  margin-top: 1rem;
+  color: var(--color-primary) !important;
+  font-size: var(--font-size-3);
+  font-weight: 600;
+}
+.sammanfattning-mobil::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 42px;
+  margin-left: 8px;
+  position: absolute;
+  left: -4.5rem;
+  background-image: url("/assets/icons/iphone.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sammanfattning-mobil::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 0.5rem;
+  bottom: 6px;
+  position: absolute;
+  background-image: url("/assets/icons/trend-up.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1400px) {
+  .sammanfattning-mobil {
+    margin-left: -1rem;
+    font-size: var(--font-size-2);
+    margin-left: -2rem;
+  }
+  .sammanfattning-mobil::before {
+    margin-left: 1rem;
+  }
+  .sammanfattning-mobil::after {
+    margin-left: 0.5rem;
+    bottom: 1px;
+    height: 26px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .sammanfattning-mobil {
+    margin-left: -6.5rem;
+    font-size: 1.2rem;
+  }
+  .sammanfattning-mobil::before {
+    display: none;
+  }
+  .sammanfattning-mobil::after {
+    margin-left: 0.2rem;
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sammanfattning-mobil {
+    font-size: var(--font-size-2) !important;
+  }
+  .sammanfattning-mobil::after {
+    display: none;
+  }
+}
+
+.sammanfattning-geo {
+  position: relative;
+}
+.sammanfattning-geo .submain__box-content {
+  margin-bottom: 2rem;
+}
+.sammanfattning-geo::after {
+  content: "";
+  display: inline-block;
+  width: 150px;
+  height: 200px;
+  border-radius: var(--border-radius-big);
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  background-image: url("/assets/images/map.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1100px) {
+  .sammanfattning-geo::after {
+    width: 120px;
+    height: 180px;
+    bottom: -45px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .sammanfattning-geo .submain__box-content {
+    text-align: center;
+    font-size: var(--font-size-2) !important;
+  }
+  .sammanfattning-geo::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sammanfattning-geo .submain__box-content {
+    font-size: var(--font-size-1) !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

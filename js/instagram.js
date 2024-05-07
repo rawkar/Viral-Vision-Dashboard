@@ -37,12 +37,13 @@ function hanteraData(data) {
     uppdateraElement(antalFoljare, data.instagram.totalFollowers, 'Kunde inte ladda antal följare');
     uppdateraElement(nyaFoljare, data.instagram.newFollowers, 'Data saknas');
     uppdateraElement(okningFoljare, data.instagram.growthPercentage, 'Data saknas');
-    uppdateraElement(bastaInlagg, data.instagram.clicks.bestPost, 'Data saknas'); // Uppdaterad sökväg
+    uppdateraElement(bastaInlagg, data.instagram.clicks.bestPost, 'Data saknas'); 
     uppdateraElement(klickInlagg, data.linkedin.clicks.allClicks, 'Data saknas');
-
     uppdateraElement(dator, data.instagram.deviceUsage.desktop, 'Data saknas');
     uppdateraElement(mobil, data.instagram.deviceUsage.mobile, 'Data saknas');
     uppdateraElement(geo, data.instagram.geography, 'Data saknas');
+
+ 
   }
   
   fetch('http://localhost:3001/overview/')

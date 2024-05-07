@@ -64,7 +64,7 @@
       }
     }
 
-    .main__box-rows-1 {
+    .main__box-rows {
       display: grid;
 
       grid-template-columns: repeat(12, 1fr);
@@ -72,8 +72,8 @@
     }
 
     .sammanfattning,
-    .trender {
-      grid-column: span 6;
+    .sammanfattning-trender {
+      grid-column: span 4;
     }
 
     .instagram,
@@ -82,12 +82,9 @@
       grid-column: span 4;
     }
 
-    .enheter {
+    .sammanfattning-enheter,
+    .sammanfattning-geo {
       grid-column: span 8;
-    }
-
-    .geo {
-      grid-column: span 4;
     }
 
     // Enheter
@@ -104,6 +101,287 @@
     .dator {
       border-right: 1px solid #fcfcfc54;
       padding-right: 6rem;
+    }
+  }
+
+  @include responsive.max(900px) {
+    .main__box-rows {
+      grid-template-columns: 1fr;
+
+      .instagram,
+      .facebook,
+      .linkedin,
+      .sammanfattning-trender,
+      .sammanfattning,
+      .sammanfattning-enheter,
+      .sammanfattning-geo {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .main__title {
+      font-size: var(--font-size-4);
+    }
+  }
+
+  @include responsive.max(680px) {
+    .main__title {
+      font-size: var(--font-size-4);
+    }
+  }
+}
+
+//STYLING
+
+#total-linkedin,
+#total-instagram,
+#total-facebook {
+  color: var(--color-primary);
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-left: 8px;
+    position: absolute;
+    bottom: 8px;
+    background-image: url("/assets/icons/trend-up.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include responsive.max(500px) {
+      width: 36px;
+      height: 36px;
+      margin-left: 8px;
+      position: absolute;
+      bottom: 10px;
+    }
+  }
+}
+
+//Dator
+
+.sammanfattning-dator {
+  position: relative;
+  margin-left: 4.5rem;
+  border-right: 1px solid #fcfcfc54;
+
+  margin-top: 1rem;
+  padding-right: 6rem;
+
+  color: var(--color-complementary);
+  font-size: var(--font-size-3);
+  font-weight: 600;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 48px;
+    margin-left: 8px;
+    position: absolute;
+
+    left: -5rem;
+    background-image: url("/assets/icons/desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 0.5rem;
+    position: absolute;
+    bottom: 8px;
+    background-image: url("/assets/icons/trend-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include responsive.max(1400px) {
+    padding-right: 8rem !important;
+    font-size: var(--font-size-2);
+    padding-right: 5rem !important;
+
+    margin-left: 3.5rem;
+
+    &::before {
+      margin-left: 1.5rem;
+      bottom: -8px;
+    }
+
+    &::after {
+      margin-left: 0.5rem;
+      bottom: 4px;
+      height: 26px;
+    }
+  }
+
+  @include responsive.max(1200px) {
+    padding-right: 3.5rem !important;
+    margin-left: 0rem !important;
+    font-size: 1.2rem;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      margin-left: 0.2rem;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  @include responsive.max(500px) {
+    padding-right: 3.5rem !important;
+    margin-left: 0rem !important;
+    font-size: var(--font-size-2) !important;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+//Mobil
+
+.sammanfattning-mobil {
+  position: relative;
+
+  margin-top: 1rem;
+
+  color: var(--color-primary) !important;
+  font-size: var(--font-size-3);
+  font-weight: 600;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 42px;
+    margin-left: 8px;
+    position: absolute;
+
+    left: -4.5rem;
+    background-image: url("/assets/icons/iphone.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 0.5rem;
+    bottom: 6px;
+    position: absolute;
+
+    background-image: url("/assets/icons/trend-up.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include responsive.max(1400px) {
+    margin-left: -1rem;
+    font-size: var(--font-size-2);
+    margin-left: -2rem;
+
+    &::before {
+      margin-left: 1rem;
+    }
+
+    &::after {
+      margin-left: 0.5rem;
+      bottom: 1px;
+      height: 26px;
+    }
+  }
+
+  @include responsive.max(1200px) {
+    margin-left: -6.5rem;
+
+    font-size: 1.2rem;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      margin-left: 0.2rem;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  @include responsive.max(500px) {
+    font-size: var(--font-size-2) !important;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.sammanfattning-geo {
+  position: relative;
+
+  .submain__box-content {
+    margin-bottom: 2rem;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    border-radius: var(--border-radius-big);
+
+    position: absolute;
+
+    top: 10px;
+    right: 30px;
+    background-image: url("/assets/images/map.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include responsive.max(1100px) {
+    &::after {
+      width: 120px;
+      height: 180px;
+      bottom: -45px;
+    }
+  }
+
+  @include responsive.max(680px) {
+    .submain__box-content {
+      text-align: center;
+      font-size: var(--font-size-2) !important;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  @include responsive.max(500px) {
+    .submain__box-content {
+      font-size: var(--font-size-1) !important;
     }
   }
 }
