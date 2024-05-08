@@ -94,6 +94,7 @@
     }
 
     // Enheter
+
     .enheter__container {
       display: flex;
       gap: 8rem;
@@ -125,7 +126,6 @@
       gap: 1rem;
 
       @include responsive.max(900px) {
-        margin-bottom: 2rem;
       }
     }
     .dator {

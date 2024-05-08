@@ -384,12 +384,6 @@ input[type=submit] {
   align-items: center;
   gap: 1rem;
 }
-@media screen and (max-width: 900px) {
-  .submain__box-container .dator,
-  .submain__box-container .mobil {
-    margin-bottom: 2rem;
-  }
-}
 .submain__box-container .dator {
   border-right: 1px solid rgba(252, 252, 252, 0.3294117647);
   padding-right: 6rem;
@@ -773,6 +767,18 @@ input[type=submit] {
   margin-top: 3rem;
   margin-bottom: 6rem;
 }
+.main__box-subheader {
+  margin-top: 2rem;
+  margin-bottom: -0.5rem;
+}
+.main__box-text {
+  opacity: 50%;
+}
+@media screen and (max-width: 1100px) {
+  .main__box-text {
+    font-size: 0.6rem !important;
+  }
+}
 .main__box-container {
   gap: 2rem;
 }
@@ -791,7 +797,7 @@ input[type=submit] {
   color: #fcfcfc;
 }
 .main__box-container .main__box-card p {
-  margin-bottom: 0;
+  margin-bottom: 0rem;
   font-size: 13px;
 }
 .main__box-container .main__box-card .main__box-title {
@@ -815,9 +821,20 @@ input[type=submit] {
 .main__box-container .sammanfattning-geo {
   grid-column: span 8;
 }
+.main__box-container .sammanfattning-enheter .main__box-text,
+.main__box-container .sammanfattning-geo .main__box-text {
+  padding-top: 0.2rem;
+}
+.main__box-container .sammanfattning-enheter .main__box-text {
+  padding-top: 2.4rem;
+}
+.main__box-container .sammanfattning-geo .main__box-text {
+  padding-top: 0.2rem;
+}
 .main__box-container .enheter__container {
   display: flex;
   gap: 8rem;
+  align-items: center;
 }
 .main__box-container .dator,
 .main__box-container .mobil {
@@ -865,7 +882,7 @@ input[type=submit] {
   display: inline-block;
   width: 36px;
   height: 36px;
-  margin-left: 8px;
+  margin-left: 3rem;
   position: absolute;
   bottom: 8px;
   background-image: url("/assets/icons/trend-up.svg");
@@ -879,9 +896,27 @@ input[type=submit] {
   #total-facebook::after {
     width: 36px;
     height: 36px;
-    margin-left: 8px;
+    margin-left: 3rem;
     position: absolute;
     bottom: 10px;
+  }
+}
+
+.sammanfattning .main__box-content,
+.sammanfattning-trender .main__box-content {
+  padding: 0 0 2rem 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+  .sammanfattning .main__box-content,
+  .sammanfattning-trender .main__box-content {
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sammanfattning .main__box-content,
+  .sammanfattning-trender .main__box-content {
+    font-size: var(--font-size-3) !important;
   }
 }
 
@@ -959,7 +994,7 @@ input[type=submit] {
 }
 @media screen and (max-width: 500px) {
   .sammanfattning-dator {
-    padding-right: 3.5rem !important;
+    padding-right: 1.2rem !important;
     margin-left: 0rem !important;
     font-size: var(--font-size-2) !important;
   }
