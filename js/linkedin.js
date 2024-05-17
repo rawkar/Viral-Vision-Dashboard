@@ -44,7 +44,7 @@ function hanteraData(data) {
     uppdateraElement(geo, data.linkedin.geography, 'Data saknas');
   }
   
-  fetch('http://localhost:3001/overview/')
+  fetch('http://localhost:3000/overview/')
     .then(response => response.json())
     .then(hanteraData)
     .catch(error => {

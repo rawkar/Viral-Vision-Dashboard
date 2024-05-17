@@ -93,11 +93,22 @@
       }
     }
 
+    .enheter,
+    .geo {
+      .submain__box-text {
+        padding-top: 1.4rem;
+      }
+    }
+
     // Enheter
 
     .enheter__container {
       display: flex;
       gap: 8rem;
+
+      p {
+        padding-top: 2.4rem !important;
+      }
 
       @include responsive.max(680px) {
         flex-direction: column;
@@ -278,6 +289,8 @@
   }
 }
 
+// Enheter
+
 //Dator
 .dator {
   position: relative;
@@ -450,10 +463,6 @@
 .geo {
   position: relative;
 
-  .submain__box-content {
-    margin-bottom: 2rem;
-  }
-
   &::after {
     content: "";
     display: inline-block;
@@ -500,7 +509,6 @@
   .submain__box-content {
     text-align: center;
     @include responsive.max(900px) {
-      margin-bottom: 2rem;
     }
   }
 

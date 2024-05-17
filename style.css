@@ -357,9 +357,16 @@ input[type=submit] {
     grid-column: 1/-1;
   }
 }
+.submain__box-container .enheter .submain__box-text,
+.submain__box-container .geo .submain__box-text {
+  padding-top: 1.4rem;
+}
 .submain__box-container .enheter__container {
   display: flex;
   gap: 8rem;
+}
+.submain__box-container .enheter__container p {
+  padding-top: 2.4rem !important;
 }
 @media screen and (max-width: 680px) {
   .submain__box-container .enheter__container {
@@ -678,9 +685,6 @@ input[type=submit] {
 .geo {
   position: relative;
 }
-.geo .submain__box-content {
-  margin-bottom: 2rem;
-}
 .geo::after {
   content: "";
   display: inline-block;
@@ -719,11 +723,6 @@ input[type=submit] {
 
 .klick-inlagg .submain__box-content {
   text-align: center;
-}
-@media screen and (max-width: 900px) {
-  .klick-inlagg .submain__box-content {
-    margin-bottom: 2rem;
-  }
 }
 @media screen and (max-width: 1100px) {
   .klick-inlagg h4 {
@@ -821,15 +820,11 @@ input[type=submit] {
 .main__box-container .sammanfattning-geo {
   grid-column: span 8;
 }
-.main__box-container .sammanfattning-enheter .main__box-text,
-.main__box-container .sammanfattning-geo .main__box-text {
-  padding-top: 0.2rem;
-}
 .main__box-container .sammanfattning-enheter .main__box-text {
   padding-top: 2.4rem;
 }
 .main__box-container .sammanfattning-geo .main__box-text {
-  padding-top: 0.2rem;
+  padding-top: 0.1rem;
 }
 .main__box-container .enheter__container {
   display: flex;
@@ -880,11 +875,11 @@ input[type=submit] {
 #total-facebook::after {
   content: "";
   display: inline-block;
-  width: 36px;
-  height: 36px;
-  margin-left: 3rem;
+  width: 46px;
+  height: 46px;
+  margin-left: 3.5rem;
   position: absolute;
-  bottom: 8px;
+  bottom: 16px;
   background-image: url("/assets/icons/trend-up.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -1072,6 +1067,11 @@ input[type=submit] {
   .sammanfattning-mobil::after {
     display: none;
   }
+}
+
+#sammanfattning-trender {
+  color: var(--color-primary) !important;
+  position: relative;
 }
 
 .sammanfattning-geo {

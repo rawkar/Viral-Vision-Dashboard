@@ -99,9 +99,9 @@
     .sammanfattning-geo {
       grid-column: span 8;
 
-      .main__box-text {
-        padding-top: 0.2rem;
-      }
+      // .main__box-text {
+      //   padding-top: 0.2rem;
+      // }
     }
 
     .sammanfattning-enheter {
@@ -112,7 +112,7 @@
 
     .sammanfattning-geo {
       .main__box-text {
-        padding-top: 0.2rem;
+        padding-top: 0.1rem;
       }
     }
 
@@ -171,11 +171,11 @@
   &::after {
     content: "";
     display: inline-block;
-    width: 36px;
-    height: 36px;
-    margin-left: 3rem;
+    width: 46px;
+    height: 46px;
+    margin-left: 3.5rem;
     position: absolute;
-    bottom: 8px;
+    bottom: 16px;
     background-image: url("/assets/icons/trend-up.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -211,14 +211,6 @@
   }
 }
 
-//Dator
-
-// .sammanfattning-dator,
-// .sammanfattning-mobil {
-//   .main__box-text {
-//     margin-bottom: -12rem !important;
-//   }
-// }
 .sammanfattning-dator {
   position: relative;
   margin-left: 4.5rem;
@@ -391,6 +383,16 @@
     }
   }
 }
+
+//Trender
+
+#sammanfattning-trender {
+  color: var(--color-primary) !important;
+
+  position: relative;
+}
+
+//Geo
 
 .sammanfattning-geo {
   position: relative;

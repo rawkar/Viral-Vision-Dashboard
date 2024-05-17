@@ -46,7 +46,7 @@ function hanteraData(data) {
  
   }
   
-  fetch('http://localhost:3001/overview/')
+  fetch('http://localhost:3000/overview/')
     .then(response => response.json())
     .then(hanteraData)
     .catch(error => {
