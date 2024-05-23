@@ -160,10 +160,6 @@
         grid-column: 1 / -1;
       }
     }
-
-    .main__title {
-      font-size: var(--font-size-4);
-    }
   }
 
   @include responsive.max(680px) {
@@ -180,23 +176,35 @@
 #total-facebook {
   color: var(--color-primary);
   position: relative;
+
+  @include responsive.max(1100px) {
+    font-size: var(--font-size-4);
+  }
   &::after {
     content: "";
     display: inline-block;
     width: 46px;
     height: 46px;
-    margin-left: 3.5rem;
+    margin-left: 0.5rem;
     position: absolute;
-    bottom: 16px;
+    bottom: 12px;
     background-image: url("/assets/icons/trend-up.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
+    @include responsive.max(1100px) {
+      width: 36px;
+      height: 36px;
+      margin-left: 0.2rem;
+      position: absolute;
+      bottom: 10px;
+    }
+
     @include responsive.max(500px) {
       width: 36px;
       height: 36px;
-      margin-left: 3rem;
+      margin-left: 0.2rem;
       position: absolute;
       bottom: 10px;
     }
