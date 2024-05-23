@@ -121,6 +121,25 @@
       display: flex;
       gap: 8rem;
       align-items: center;
+      @include responsive.max(680px) {
+        flex-direction: column;
+        gap: 0rem;
+        padding: 0;
+
+        align-items: center;
+
+        .sammanfattning-dator {
+          border: none;
+          padding: 0 !important;
+
+          margin: 0;
+        }
+
+        .sammanfattning-mobil {
+          padding: 0 !important;
+          margin: 1rem 0 2rem !important;
+        }
+      }
     }
     .dator,
     .mobil {
@@ -294,12 +313,14 @@
   }
 
   @include responsive.max(500px) {
-    padding-right: 1.2rem !important;
+    padding-right: 3.5rem !important;
     margin-left: 0rem !important;
-    font-size: var(--font-size-2) !important;
+    font-size: var(--font-size-1) !important;
 
     &::after {
-      display: none;
+      margin-left: 0.5rem;
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -376,10 +397,14 @@
   }
 
   @include responsive.max(500px) {
-    font-size: var(--font-size-2) !important;
+    padding-right: 3.5rem !important;
+
+    font-size: var(--font-size-1) !important;
 
     &::after {
-      display: none;
+      margin-left: 0.5rem;
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -410,7 +435,7 @@
 
     position: absolute;
 
-    top: 10px;
+    top: 20px;
     right: 30px;
     background-image: url("/assets/images/map.png");
     background-size: contain;
@@ -427,7 +452,7 @@
   }
 
   @include responsive.max(680px) {
-    .submain__box-content {
+    .main__box-content {
       text-align: center;
       font-size: var(--font-size-2) !important;
     }
@@ -437,7 +462,7 @@
   }
 
   @include responsive.max(500px) {
-    .submain__box-content {
+    .main__box-content {
       font-size: var(--font-size-1) !important;
     }
   }

@@ -606,10 +606,12 @@ input[type=submit] {
   .dator {
     padding-right: 3.5rem !important;
     margin-left: 0rem !important;
-    font-size: var(--font-size-2) !important;
+    font-size: var(--font-size-1) !important;
   }
   .dator::after {
-    display: none;
+    margin-left: 7rem;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -675,10 +677,13 @@ input[type=submit] {
 }
 @media screen and (max-width: 500px) {
   .mobil {
-    font-size: var(--font-size-2) !important;
+    padding-right: 3.5rem !important;
+    font-size: var(--font-size-1) !important;
   }
   .mobil::after {
-    display: none;
+    margin-left: 5rem;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -722,6 +727,7 @@ input[type=submit] {
 }
 
 .klick-inlagg .submain__box-content {
+  color: var(--color-primary) !important;
   text-align: center;
 }
 @media screen and (max-width: 1100px) {
@@ -830,6 +836,23 @@ input[type=submit] {
   display: flex;
   gap: 8rem;
   align-items: center;
+}
+@media screen and (max-width: 680px) {
+  .main__box-container .enheter__container {
+    flex-direction: column;
+    gap: 0rem;
+    padding: 0;
+    align-items: center;
+  }
+  .main__box-container .enheter__container .sammanfattning-dator {
+    border: none;
+    padding: 0 !important;
+    margin: 0;
+  }
+  .main__box-container .enheter__container .sammanfattning-mobil {
+    padding: 0 !important;
+    margin: 1rem 0 2rem !important;
+  }
 }
 .main__box-container .dator,
 .main__box-container .mobil {
@@ -989,12 +1012,14 @@ input[type=submit] {
 }
 @media screen and (max-width: 500px) {
   .sammanfattning-dator {
-    padding-right: 1.2rem !important;
+    padding-right: 3.5rem !important;
     margin-left: 0rem !important;
-    font-size: var(--font-size-2) !important;
+    font-size: var(--font-size-1) !important;
   }
   .sammanfattning-dator::after {
-    display: none;
+    margin-left: 0.5rem;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -1062,10 +1087,13 @@ input[type=submit] {
 }
 @media screen and (max-width: 500px) {
   .sammanfattning-mobil {
-    font-size: var(--font-size-2) !important;
+    padding-right: 3.5rem !important;
+    font-size: var(--font-size-1) !important;
   }
   .sammanfattning-mobil::after {
-    display: none;
+    margin-left: 0.5rem;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -1087,7 +1115,7 @@ input[type=submit] {
   height: 200px;
   border-radius: var(--border-radius-big);
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 30px;
   background-image: url("/assets/images/map.png");
   background-size: contain;
@@ -1102,7 +1130,7 @@ input[type=submit] {
   }
 }
 @media screen and (max-width: 680px) {
-  .sammanfattning-geo .submain__box-content {
+  .sammanfattning-geo .main__box-content {
     text-align: center;
     font-size: var(--font-size-2) !important;
   }
@@ -1111,7 +1139,7 @@ input[type=submit] {
   }
 }
 @media screen and (max-width: 500px) {
-  .sammanfattning-geo .submain__box-content {
+  .sammanfattning-geo .main__box-content {
     font-size: var(--font-size-1) !important;
   }
 }

@@ -289,8 +289,6 @@
   }
 }
 
-// Enheter
-
 //Dator
 .dator {
   position: relative;
@@ -372,10 +370,12 @@
   @include responsive.max(500px) {
     padding-right: 3.5rem !important;
     margin-left: 0rem !important;
-    font-size: var(--font-size-2) !important;
+    font-size: var(--font-size-1) !important;
 
     &::after {
-      display: none;
+      margin-left: 7rem;
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -451,10 +451,14 @@
   }
 
   @include responsive.max(500px) {
-    font-size: var(--font-size-2) !important;
+    padding-right: 3.5rem !important;
+
+    font-size: var(--font-size-1) !important;
 
     &::after {
-      display: none;
+      margin-left: 5rem;
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -507,6 +511,7 @@
 
 .klick-inlagg {
   .submain__box-content {
+    color: var(--color-primary) !important;
     text-align: center;
     @include responsive.max(900px) {
     }
