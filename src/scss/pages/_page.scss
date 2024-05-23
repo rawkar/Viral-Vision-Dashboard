@@ -373,9 +373,7 @@
     font-size: var(--font-size-1) !important;
 
     &::after {
-      margin-left: 7rem;
-      width: 20px;
-      height: 20px;
+      display: none;
     }
   }
 }
@@ -456,9 +454,7 @@
     font-size: var(--font-size-1) !important;
 
     &::after {
-      margin-left: 5rem;
-      width: 20px;
-      height: 20px;
+      display: none;
     }
   }
 }
@@ -476,7 +472,7 @@
 
     position: absolute;
 
-    top: 10px;
+    top: 20px;
     right: 30px;
     background-image: url("/assets/images/map.png");
     background-size: contain;
@@ -488,7 +484,7 @@
     &::after {
       width: 120px;
       height: 180px;
-      bottom: -45px;
+      top: 35px;
     }
   }
 
@@ -513,6 +509,8 @@
   .submain__box-content {
     color: var(--color-primary) !important;
     text-align: center;
+    padding-bottom: 2rem;
+
     @include responsive.max(900px) {
     }
   }

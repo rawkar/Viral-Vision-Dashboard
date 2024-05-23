@@ -609,9 +609,7 @@ input[type=submit] {
     font-size: var(--font-size-1) !important;
   }
   .dator::after {
-    margin-left: 7rem;
-    width: 20px;
-    height: 20px;
+    display: none;
   }
 }
 
@@ -681,9 +679,7 @@ input[type=submit] {
     font-size: var(--font-size-1) !important;
   }
   .mobil::after {
-    margin-left: 5rem;
-    width: 20px;
-    height: 20px;
+    display: none;
   }
 }
 
@@ -697,7 +693,7 @@ input[type=submit] {
   height: 200px;
   border-radius: var(--border-radius-big);
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 30px;
   background-image: url("/assets/images/map.png");
   background-size: contain;
@@ -708,7 +704,7 @@ input[type=submit] {
   .geo::after {
     width: 120px;
     height: 180px;
-    bottom: -45px;
+    top: 35px;
   }
 }
 @media screen and (max-width: 680px) {
@@ -729,6 +725,7 @@ input[type=submit] {
 .klick-inlagg .submain__box-content {
   color: var(--color-primary) !important;
   text-align: center;
+  padding-bottom: 2rem;
 }
 @media screen and (max-width: 1100px) {
   .klick-inlagg h4 {
@@ -775,6 +772,11 @@ input[type=submit] {
 .main__box-subheader {
   margin-top: 2rem;
   margin-bottom: -0.5rem;
+}
+@media screen and (max-width: 1100px) {
+  .main__box-subheader {
+    font-size: 0.8rem !important;
+  }
 }
 .main__box-text {
   opacity: 50%;
@@ -843,6 +845,7 @@ input[type=submit] {
     gap: 0rem;
     padding: 0;
     align-items: center;
+    margin: 0 auto;
   }
   .main__box-container .enheter__container .sammanfattning-dator {
     border: none;
@@ -853,16 +856,6 @@ input[type=submit] {
     padding: 0 !important;
     margin: 1rem 0 2rem !important;
   }
-}
-.main__box-container .dator,
-.main__box-container .mobil {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.main__box-container .dator {
-  border-right: 1px solid rgba(252, 252, 252, 0.3294117647);
-  padding-right: 6rem;
 }
 @media screen and (max-width: 900px) {
   .main .main__box-rows {
@@ -935,6 +928,12 @@ input[type=submit] {
   .sammanfattning .main__box-content,
   .sammanfattning-trender .main__box-content {
     font-size: var(--font-size-3) !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sammanfattning .main__box-content,
+  .sammanfattning-trender .main__box-content {
+    font-size: var(--font-size-2) !important;
   }
 }
 
@@ -1010,16 +1009,19 @@ input[type=submit] {
     height: 25px;
   }
 }
-@media screen and (max-width: 500px) {
-  .sammanfattning-dator {
-    padding-right: 3.5rem !important;
-    margin-left: 0rem !important;
-    font-size: var(--font-size-1) !important;
-  }
+@media screen and (max-width: 680px) {
   .sammanfattning-dator::after {
     margin-left: 0.5rem;
     width: 20px;
     height: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sammanfattning-dator {
+    font-size: var(--font-size-1) !important;
+  }
+  .sammanfattning-dator::after {
+    display: none;
   }
 }
 
@@ -1091,9 +1093,7 @@ input[type=submit] {
     font-size: var(--font-size-1) !important;
   }
   .sammanfattning-mobil::after {
-    margin-left: 0.5rem;
-    width: 20px;
-    height: 20px;
+    display: none;
   }
 }
 
@@ -1126,7 +1126,7 @@ input[type=submit] {
   .sammanfattning-geo::after {
     width: 120px;
     height: 180px;
-    bottom: -45px;
+    top: 35px;
   }
 }
 @media screen and (max-width: 680px) {

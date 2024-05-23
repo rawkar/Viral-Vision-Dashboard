@@ -34,6 +34,9 @@
   &__box-subheader {
     margin-top: 2rem;
     margin-bottom: -0.5rem;
+    @include responsive.max(1100px) {
+      font-size: 0.8rem !important;
+    }
   }
 
   &__box-text {
@@ -127,7 +130,7 @@
         padding: 0;
 
         align-items: center;
-
+        margin: 0 auto;
         .sammanfattning-dator {
           border: none;
           padding: 0 !important;
@@ -140,16 +143,6 @@
           margin: 1rem 0 2rem !important;
         }
       }
-    }
-    .dator,
-    .mobil {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .dator {
-      border-right: 1px solid #fcfcfc54;
-      padding-right: 6rem;
     }
   }
 
@@ -226,6 +219,12 @@
   @include responsive.max(900px) {
     .main__box-content {
       font-size: var(--font-size-3) !important;
+    }
+  }
+
+  @include responsive.max(480px) {
+    .main__box-content {
+      font-size: var(--font-size-2) !important;
     }
   }
 }
@@ -312,15 +311,19 @@
     }
   }
 
-  @include responsive.max(500px) {
-    padding-right: 3.5rem !important;
-    margin-left: 0rem !important;
-    font-size: var(--font-size-1) !important;
-
+  @include responsive.max(680px) {
     &::after {
       margin-left: 0.5rem;
       width: 20px;
       height: 20px;
+    }
+  }
+
+  @include responsive.max(500px) {
+    font-size: var(--font-size-1) !important;
+
+    &::after {
+      display: none;
     }
   }
 }
@@ -402,9 +405,7 @@
     font-size: var(--font-size-1) !important;
 
     &::after {
-      margin-left: 0.5rem;
-      width: 20px;
-      height: 20px;
+      display: none;
     }
   }
 }
@@ -447,7 +448,7 @@
     &::after {
       width: 120px;
       height: 180px;
-      bottom: -45px;
+      top: 35px;
     }
   }
 
