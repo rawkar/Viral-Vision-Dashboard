@@ -65,7 +65,7 @@ function uppdateraElement(element, data, fallbackText) {
 
 // Funktion för att hantera och distribuera data
 function hanteraData(data) {
-  uppdateraElement(antalFoljare, data.linkedin.totalFollowers.toString(), 'Kunde inte ladda antal följare');
+  uppdateraElement(antalFoljare, data.linkedin.totalFollowers.toString(), 'Data saknas');
   uppdateraElement(nyaFoljare, data.linkedin.newFollowers.toString(), 'Data saknas');
   uppdateraElement(okningFoljare, data.linkedin.growthPercentage, 'Data saknas');
   uppdateraElement(bastaInlagg, data.linkedin.clicks.bestPost, 'Data saknas');

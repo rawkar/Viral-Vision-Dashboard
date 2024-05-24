@@ -65,7 +65,7 @@ function uppdateraElement(element, data, fallbackText) {
 
 // Funktion för att hantera och distribuera data
 function hanteraData(data) {
-  uppdateraElement(antalFoljare, data.instagram.totalFollowers.toString(), 'Kunde inte ladda antal följare');
+  uppdateraElement(antalFoljare, data.instagram.totalFollowers.toString(), 'Data saknas');
   uppdateraElement(nyaFoljare, data.instagram.newFollowers.toString(), 'Data saknas');
   uppdateraElement(okningFoljare, data.instagram.growthPercentage, 'Data saknas');
   uppdateraElement(bastaInlagg, data.instagram.clicks.bestPost, 'Data saknas');

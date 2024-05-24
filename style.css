@@ -639,7 +639,7 @@ input[type=submit] {
   display: inline-block;
   width: 30px;
   height: 30px;
-  margin-left: 9rem;
+  margin-left: 9.2rem;
   position: absolute;
   background-image: url("/assets/icons/trend-up.svg");
   background-size: contain;

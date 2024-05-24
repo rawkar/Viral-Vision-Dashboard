@@ -41,7 +41,7 @@ function animeraSiffror(element, slutVarde, duration = 1000) {
   window.requestAnimationFrame(animation);
 }
 
-// Uppdaterad funktion för att uppdatera HTML-innehållet i ett element med möjlighet till animation
+// Funktion för att uppdatera HTML-innehållet i ett element med animation
 function uppdateraElement(element, data, fallbackText) {
   if (!element) return;
 
@@ -65,7 +65,7 @@ function uppdateraElement(element, data, fallbackText) {
 
 // Funktion för att hantera och distribuera data
 function hanteraData(data) {
-  uppdateraElement(antalFoljare, data.facebook.totalFollowers.toString(), 'Kunde inte ladda antal följare');
+  uppdateraElement(antalFoljare, data.facebook.totalFollowers.toString(), 'Data saknas');
   uppdateraElement(nyaFoljare, data.facebook.newFollowers.toString(), 'Data saknas');
   uppdateraElement(okningFoljare, data.facebook.growthPercentage, 'Data saknas');
   uppdateraElement(bastaInlagg, data.facebook.clicks.bestPost, 'Data saknas');
